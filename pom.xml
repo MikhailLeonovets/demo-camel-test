@@ -55,11 +55,14 @@
       <groupId>org.apache.camel</groupId>
       <artifactId>camel-timer</artifactId>
     </dependency>
-    <!-- https://mvnrepository.com/artifact/org.apache.camel/camel-management -->
     <dependency>
       <groupId>org.apache.camel</groupId>
       <artifactId>camel-management</artifactId>
     </dependency> <!--SHOULD BE IF U WANT ENABLE JMX-->
+    <dependency>
+      <groupId>org.apache.camel</groupId>
+      <artifactId>camel-jmx</artifactId>
+    </dependency> <!--TODO WTF-->
 
     <!-- camel and web -->
     <dependency>
@@ -77,11 +80,13 @@
       <artifactId>camel-micrometer</artifactId>
     </dependency>
     <dependency>
-      <groupId>io.micrometer</groupId>
-      <artifactId>micrometer-registry-prometheus</artifactId>
-      <version>1.12.3</version> <!-- Replace x.x.x with the version of Micrometer Prometheus registry you're using -->
+      <groupId>org.apache.camel</groupId>
+      <artifactId>camel-micrometer-prometheus</artifactId>
     </dependency>
-    <!-- https://mvnrepository.com/artifact/org.apache.camel/camel-metrics -->
+<!--    <dependency>
+      <groupId>org.apache.camel</groupId>
+      <artifactId>camel-platform-http-vertx</artifactId>
+    </dependency>-->
     <dependency>
       <groupId>org.apache.camel</groupId>
       <artifactId>camel-metrics</artifactId>

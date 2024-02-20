@@ -24,10 +24,12 @@ public final class MyApplication {
                 HierarchicalNameMapper.DEFAULT
         ));
 
-        Main main = new Main();
-        main.configure().addConfiguration(ContextConfig.class);
+        Main main = new Main(MyApplication.class);
+        main.configure().setRoutesCollectorEnabled(false);
         main.bind("myBean", new MyBean("hi", "bye"));
+/*
         main.bind(MicrometerConstants.METRICS_REGISTRY_NAME, registry);
+*/
         main.run(args);
     }
 

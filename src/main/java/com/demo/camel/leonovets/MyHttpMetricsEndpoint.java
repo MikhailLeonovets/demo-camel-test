@@ -9,6 +9,8 @@ import org.apache.camel.builder.RouteBuilder;
 public class MyHttpMetricsEndpoint extends RouteBuilder {
     @Override
     public void configure() throws Exception {
-
+        from("platform-http:/localhost:8081")
+                .routeId("get")
+                .setBody().constant("Hello from Camel's PlatformHttp service");
     }
 }

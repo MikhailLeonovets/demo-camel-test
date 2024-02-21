@@ -7,9 +7,9 @@ public class MyRouteBuilder extends RouteBuilder {
     @Override
     public void configure() {
         from("timer:foo?period={{myPeriod}}")
-                .bean("myBean", "hello")
-                .log("${body}")
-                .bean("myBean", "bye")
-                .log("${body}");
+            .bean("myBean", "hello")
+            .log("${body}")
+            .bean("myBean", "bye")
+            .log("${body}");
     }
 }

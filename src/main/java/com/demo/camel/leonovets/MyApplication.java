@@ -1,12 +1,10 @@
 package com.demo.camel.leonovets;
 
 import io.micrometer.core.instrument.Clock;
-import io.micrometer.core.instrument.MeterRegistry;
 import io.micrometer.core.instrument.composite.CompositeMeterRegistry;
 import io.micrometer.core.instrument.util.HierarchicalNameMapper;
 import io.micrometer.jmx.JmxMeterRegistry;
 import org.apache.camel.component.micrometer.CamelJmxConfig;
-import org.apache.camel.component.micrometer.MicrometerConstants;
 import org.apache.camel.main.Main;
 
 /**
@@ -27,9 +25,6 @@ public final class MyApplication {
         Main main = new Main(MyApplication.class);
         main.configure().setRoutesCollectorEnabled(false);
         main.bind("myBean", new MyBean("hi", "bye"));
-/*
-        main.bind(MicrometerConstants.METRICS_REGISTRY_NAME, registry);
-*/
         main.run(args);
     }
 

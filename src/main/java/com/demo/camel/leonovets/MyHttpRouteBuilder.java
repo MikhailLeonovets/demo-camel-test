@@ -8,11 +8,9 @@ import org.apache.camel.builder.RouteBuilder;
  */
 public class MyHttpRouteBuilder extends RouteBuilder {
     @Override
-    public void configure() throws Exception {
+    public void configure() {
         from("jetty:http://localhost:8080/welcome")
-                .process(exchange -> {
-                    exchange.getIn().setBody("IM HERE !!!!");
-                })
+            .process(exchange -> exchange.getIn().setBody("IM HERE !!!!"))
                 .end();
     }
 }
